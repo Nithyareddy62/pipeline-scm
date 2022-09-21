@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Git Checkout'){
             steps {
-                git credentialsId:'MyGitHub',url: 'https://github.com/Nithyareddy62/my-app.git'
+                git credentialsId:'MyGitHub',url: 'https://github.com/Nithyareddy62/pipeline-scm.git'
             }
         }
         stage('SonarQube Analysis'){
