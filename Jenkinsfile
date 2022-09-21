@@ -6,7 +6,7 @@ pipeline {
                 git credentialsId:'MyGitHub',url: 'https://github.com/Nithyareddy62/my-app.git'
             }
         }
-        stage('sonar qube'){
+        stage('SonarQube Analysis'){
             steps {
                 withSonarQubeEnv('sonarqube'){
                     sh 'mvn clean install sonar:sonar -DskipTests=true -Dsonar.organization="myapp" -Dsonar.projectKey="myapp-" -Dsonar.projectName="myapp-" '
