@@ -9,7 +9,7 @@ pipeline {
         stage('SonarQube Analysis'){
             steps {
                 withSonarQubeEnv('sonarqube'){
-                    sh 'mvn clean install sonar:sonar -DskipTests=true -Dsonar.organization="myapp" -Dsonar.projectKey="myapp-" -Dsonar.projectName="myapp-" '
+                    sh 'mvn clean install sonar:sonar -DskipTests=true -Dsonar.organization="nithyareddy62" -Dsonar.projectKey="nithyareddy62" -Dsonar.projectName="myapp-" '
                    
                 }
             }
